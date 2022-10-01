@@ -49,17 +49,17 @@ email_list = {
 
 
 def get_email_info():
-    talk('To Whom you want to send email')
+    talk('Enter the email to whom you want to send the email')
     name = get_info()
     receiver = email_list[name]
     print(receiver)
-    talk('What is the subject of your email?')
+    talk('What will be the subject of your email?')
     subject = get_info()
-    talk('Tell me the text in your email')
+    talk('Enter the body of your email')
     message = get_info()
     send_email(receiver, subject, message)
     talk('Hello human, your email is sent')
-    talk('Do you want to send more email?')
+    talk('Do you want to send more emails?')
     send_more = get_info()
     if 'yes' in send_more:
         get_email_info()
