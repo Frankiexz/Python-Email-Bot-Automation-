@@ -38,7 +38,7 @@ def send_email(receiver, subject, message):
     email['Subject'] = subject
     email.set_content(message)
     server.send_message(email)
-
+    
 
 email_list = {
     'Person A': 'personA@gmail.com',
@@ -49,16 +49,16 @@ email_list = {
 
 
 def get_email_info():
-    talk('Enter the email to whom you want to send the email')
+    talk('Enter the emails of all to whom you want to send the email')
     name = get_info()
     receiver = email_list[name]
     print(receiver)
-    talk('What will be the subject of your email?')
+    talk('What will be the NEW subject of your email?')
     subject = get_info()
-    talk('Enter the body of your email')
+    talk('Enter the body/crux of your email')
     message = get_info()
     send_email(receiver, subject, message)
-    talk('Hello human, your email is sent')
+    talk('Hello human being, your email is sent')
     talk('Do you want to send more emails?')
     send_more = get_info()
     if 'yes' in send_more:
